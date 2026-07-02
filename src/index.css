@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bg-light: #FFFFFF;
+  --color-primary: #2563EB;
+  --color-secondary: #60A5FA;
+  --color-accent-green: #00FF9D;
+  --color-light-blue: #DBEAFE;
+  --color-text-dark: #0F172A;
+  --color-text-gray: #64748B;
+  --color-card-bg: #F8FAFC;
+  --color-border-light: #E2E8F0;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom styles and elements */
+:root {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #0F172A;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-left: 1px solid #E2E8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DBEAFE;
+  border-radius: 4px;
+  border: 2px solid #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60A5FA;
+}
+
+/* Glassmorphism panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Soft glowing borders */
+.glow-border-blue {
+  transition: all 0.3s ease;
+}
+
+.glow-border-blue:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+}
+
+/* Cybernetic decorative grid pattern (clean light mode) */
+.cyber-grid-light {
+  background-image: 
+    linear-gradient(rgba(37, 99, 235, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+}
+
+.cyber-dots-light {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.03) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Subtle mouse glow overlay */
+.mouse-glow-light {
+  background: radial-gradient(600px circle at var(--x, 0px) var(--y, 0px), rgba(37, 99, 235, 0.05), transparent 80%);
+}
+
+/* Smooth blur animations */
+.blur-load {
+  filter: blur(20px);
+  transition: filter 0.5s ease-out;
+}
+
+.blur-load.loaded {
+  filter: blur(0);
+}
