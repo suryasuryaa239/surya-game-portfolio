@@ -16,7 +16,7 @@ export default function ContactTerminal({ onTriggerAchievement }) {
     "DIRECT COORDINATES UNLOCKED:",
     "  - Email: suryasiva637480@gmail.com",
     "  - GitHub: github.com/suryasuryaa239",
-    "  - LinkedIn: linkedin.com/in/surya-a",
+    "  - LinkedIn: linkedin.com/in/surya-a-317491281",
     "  - Instagram: instagram.com/_._zurya_._",
     "Type command 'ping -t suryastudios' to monitor connection...",
     "Ping latency: 14ms. Ready for user packets."
