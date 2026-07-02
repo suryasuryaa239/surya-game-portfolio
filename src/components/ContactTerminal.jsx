@@ -7,7 +7,7 @@ export default function ContactTerminal({ onTriggerAchievement }) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [terminalLogs, setTerminalLogs] = useState([]);
   const [typingIndex, setTypingIndex] = useState(0);
-  const terminalEndRef = useRef(null);
+  const terminalLogsContainerRef = useRef(null);
 
   const logsToType = [
     "Initializing Secure Tunnel...",
@@ -24,8 +24,11 @@ export default function ContactTerminal({ onTriggerAchievement }) {
 
   // Auto Scroll Terminal Logs
   useEffect(() => {
-    if (terminalEndRef.current) {
-      terminalEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (terminalLogsContainerRef.current) {
+      terminalLogsContainerRef.current.scrollTo({
+        top: terminalLogsContainerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
     }
   }, [terminalLogs]);
 
@@ -201,6 +204,7 @@ export default function ContactTerminal({ onTriggerAchievement }) {
 
           {/* Logs Terminal Area */}
           <div 
+            ref={terminalLogsContainerRef}
             onClick={handleTerminalFocus}
             className="flex-1 overflow-y-auto pr-2 space-y-2 cursor-text"
           >
@@ -245,7 +249,6 @@ export default function ContactTerminal({ onTriggerAchievement }) {
                 </div>
               );
             })}
-            <div ref={terminalEndRef} />
           </div>
 
           {/* Bottom Prompt Link */}
